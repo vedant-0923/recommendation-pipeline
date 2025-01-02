@@ -41,25 +41,26 @@ Below is a brief description of each `.py` file in the `code/` directory:
 ---
 
 ### **Data Directory**
-The `data/` directory should contain the following files:
+The `data/` directory contains the following files:
 
-1. **Input Files**:
-   - `processed_user.csv`: Preprocessed user-level input data.
-   - `content_final.csv`: Preprocessed content-level input data.
+1. **Input and Preprocessed Data**:
+   - `aggregated_user.csv`: Aggregated user data for engagement metrics.
+   - `content_final.csv`: Final processed content-level input data.
+   - `processed_content.csv`: Preprocessed content embeddings and metadata.
+   - `processed_user_test.csv`: Processed features for test users.
    - `taxonomy_engagement_data.csv`: Raw engagement data for training and evaluation.
    - `to_predict_on.csv`: Test user and content IDs for predictions.
 
-2. **Intermediate Files**:
-   - `vg2595_offline_data.pkl`: Precomputed embeddings for users and content.
-   - `processed_user_test.csv`: Processed features for test users.
-
-3. **Model Files**:
+2. **Model Files**:
+   - `content_model.pth`: Trained content embedding model.
    - `pv_model.pth`: Trained PV embedding model.
    - `transformer_model.pth`: Trained transformer ranking model.
+   - `user_model.pth`: Trained user embedding model.
 
-4. **Output Files**:
-   - `generated_content.pkl`: Recommended content IDs.
-   - `rank_comparison_user_<user_id>.csv`: Rank comparisons for each user.
+3. **Intermediate and Output Files**:
+   - `vg2595_offline_data.pkl`: Precomputed embeddings for users and content.
+   - `generated_content.pkl`: Serialized recommended content IDs.
+   - `vg2595_recommended_items.txt`: Final recommended items for users.
 
 ---
 
